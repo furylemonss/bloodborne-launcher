@@ -1,0 +1,27 @@
+[package]
+name = "bloodborne-installer"
+version = "1.0.0"
+description = "Bloodborne full otomatik kurulum ve launcher"
+authors = ["open-source"]
+edition = "2021"
+
+[lib]
+name = "bloodborne_installer_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream"] }
+tokio = { version = "1", features = ["time", "fs", "io-util", "sync", "macros", "rt-multi-thread", "process"] }
+futures-util = "0.3"
+zip = "2"
+anyhow = "1"
+sysinfo = "0.33"
+dirs = "6"
