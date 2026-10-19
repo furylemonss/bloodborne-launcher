@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/logo.png" alt="Bloodborne Launcher" width="180" />
+<img src="banner.png" alt="Bloodborne Launcher" width="920" />
 
 # Bloodborne Launcher
 
